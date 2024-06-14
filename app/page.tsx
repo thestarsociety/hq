@@ -15,7 +15,6 @@ export default function Home() {
 
   return (
     <div className="flex relative h-screen w-full items-center justify-center overflow-hidden">
-      <RetroGrid />
       <div className="z-10 text-center flex flex-col items-center justify-center space-y-5">
         <TssIcon height={250} width={250}/>
         <TypingAnimation 
@@ -29,6 +28,7 @@ export default function Home() {
             </span>
         </ShimmerButton>
       </div>
+      <RetroGrid />
     </div>
   );
 }
