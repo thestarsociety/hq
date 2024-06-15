@@ -1,4 +1,5 @@
 import { BackgroundBeams } from "@/components/magicui/background-beams";
+import { Boxes } from "@/components/magicui/boxes";
 import SparklesText from "@/components/magicui/sparckles-text";
 
 const HqPage = () => {
@@ -11,7 +12,7 @@ const HqPage = () => {
                     colors={{ first: "#FF930F", second: "#FFF95B" }}
                 />
             </div>
-            <BackgroundBeams />
+            <Boxes />
         </div>
     );
 }
