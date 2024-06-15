@@ -5,6 +5,7 @@ import RetroGrid from "@/components/magicui/retro-grid";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import TypingAnimation from "@/components/magicui/typing-animation";
 import { ModeToggle } from "@/components/modeToggle";
+import { Loader2 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -12,7 +13,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
 
   const { theme, systemTheme } = useTheme();
-  const [resolvedTheme, setResolvedTheme] = useState(theme);
+  const [resolvedTheme, setResolvedTheme] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     if(theme === "system") {
@@ -31,10 +32,12 @@ export default function Home() {
   return (
     <div className="flex relative h-screen w-full items-center justify-center overflow-hidden">
       <div className="z-10 text-center flex flex-col items-center justify-center space-y-5">
-        {resolvedTheme === "dark" ? (
-          <TssIcon height={250} width={250}/>
+      {resolvedTheme === undefined ? (
+          <Loader2 height={8} width={8} className="animate-spin"/> // You can replace this with a default icon or spinner
+        ) : resolvedTheme === "dark" ? (
+          <TssIcon height={250} width={250} />
         ) : (
-          <TssDarkIcon height={250} width={250}/>
+          <TssDarkIcon height={250} width={250} />
         )}
         <TypingAnimation 
           className="text-xl font-semibold text-black dark:text-white"
