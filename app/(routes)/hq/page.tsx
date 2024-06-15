@@ -1,4 +1,4 @@
-import { BackgroundBeams } from "@/components/magicui/background-beams";
+"use client";
 import { Boxes } from "@/components/magicui/boxes";
 import SparklesText from "@/components/magicui/sparckles-text";
 
