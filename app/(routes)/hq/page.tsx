@@ -1,6 +1,7 @@
 "use client";
 
 import GridPattern from "@/components/magicui/grid-background";
+import { Highlight } from "@/components/magicui/hero-highlight";
 import { Navbar } from "@/components/navBar";
 import AboutUs from "@/components/pages/aboutUs";
 import Projects from "@/components/pages/projects";
@@ -29,7 +30,11 @@ const HqPage = () => {
                                 <div className="flex flex-col justify-center space-y-4">
                                     <div className="space-y-2">
                                         <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                                            Innovating Today for a Sustainable Tomorrow.
+                                            Innovating Today for a &nbsp;
+                                            
+                                        </h1>
+                                        <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                                        <Highlight>Sustainable Tomorrow.</Highlight>
                                         </h1>
                                         <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
                                             Our cutting-edge analytics platform empowers you to make informed decisions and drive your business forward.
