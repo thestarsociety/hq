@@ -6,6 +6,7 @@ import { ShinyButton } from "@/components/magicui/shiny-button";
 import { Navbar } from "@/components/navBar";
 import AboutUs from "@/components/pages/aboutUs";
 import ContactUs from "@/components/pages/contactUs";
+import Footer from "@/components/pages/footer";
 import Projects from "@/components/pages/projects";
 import { MarqueeDemo } from "@/components/reviews";
 
@@ -58,6 +59,7 @@ const HqPage = () => {
                     <AboutUs />
                     <Projects />
                     <ContactUs />
+                    <Footer />
                 </div>
             </div>
         </div>
