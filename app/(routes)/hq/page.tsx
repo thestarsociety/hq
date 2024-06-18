@@ -5,6 +5,7 @@ import { Highlight } from "@/components/magicui/hero-highlight";
 import { ShinyButton } from "@/components/magicui/shiny-button";
 import { Navbar } from "@/components/navBar";
 import AboutUs from "@/components/pages/aboutUs";
+import ContactUs from "@/components/pages/contactUs";
 import Projects from "@/components/pages/projects";
 import { MarqueeDemo } from "@/components/reviews";
 
@@ -39,14 +40,14 @@ const HqPage = () => {
                                         <Highlight>Sustainable Tomorrow.</Highlight>
                                         </h1>
                                         <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                                            Our cutting-edge analytics platform empowers you to make informed decisions and drive your business forward.
+                                            We are a group of people working on building better products accessible to everyone.
                                         </p>
                                     </div>
                                     <div className="w-full max-w-sm space-y-2">
                                         {/* Form placeholder */}
                                         <div>Form</div>
                                         <p className="text-xs text-gray-500 dark:text-gray-400">
-                                            Sign up to unlock exclusive features and insights.{" "}
+                                            Join us to create something cool{" "}
                                         </p>
                                     </div>
                                 </div>
@@ -56,6 +57,7 @@ const HqPage = () => {
                     </section>
                     <AboutUs />
                     <Projects />
+                    <ContactUs />
                 </div>
             </div>
         </div>

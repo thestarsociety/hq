@@ -1,5 +1,7 @@
 "use client";
 
+import { Peoples } from "../peoples";
+
 export default function AboutUs() {
     return (
       <section className="w-full py-12 md:py-24 lg:py-32">
@@ -13,9 +15,9 @@ export default function AboutUs() {
             <div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Mission</h2>
               <p className="mt-4 text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Our mission is to empower individuals and businesses to thrive in the digital age. We believe in the
+                Our mission is to empower to thrive in the digital age. We believe in the
                 transformative power of technology and are committed to providing innovative solutions that drive progress
-                and unlock new possibilities.
+                and unlock new possibilities for absolutely free of cost.
               </p>
             </div>
             <div>
@@ -37,7 +39,7 @@ export default function AboutUs() {
                 <li className="flex items-start gap-2">
                   <CheckIcon className="h-5 w-5 flex-shrink-0 text-gray-900 dark:text-gray-50" />
                   <span>
-                    Customer Focus: We prioritize the needs and success of our customers, working tirelessly to exceed
+                    Customer Focus: We prioritize the needs and success of our users and members, working tirelessly to exceed
                     their expectations.
                   </span>
                 </li>
