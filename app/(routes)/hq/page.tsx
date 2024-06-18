@@ -3,6 +3,7 @@
 import GridPattern from "@/components/magicui/grid-background";
 import { Navbar } from "@/components/navBar";
 import AboutUs from "@/components/pages/aboutUs";
+import Projects from "@/components/pages/projects";
 import { MarqueeDemo } from "@/components/reviews";
 
 const HqPage = () => {
@@ -16,7 +17,7 @@ const HqPage = () => {
             {/* Main content */}
             <div className="relative z-10 space-y-5">
                 {/* Fixed Navbar at the top */}
-                <div className="fixed top-0 left-0 w-full z-50">
+                <div className="fixed top-4 left-0 w-full z-50">
                     <Navbar />
                 </div>
 
@@ -47,6 +48,7 @@ const HqPage = () => {
                         </div>
                     </section>
                     <AboutUs />
+                    <Projects />
                 </div>
             </div>
         </div>
