@@ -2,6 +2,7 @@
 
 import GridPattern from "@/components/magicui/grid-background";
 import { Highlight } from "@/components/magicui/hero-highlight";
+import { ShinyButton } from "@/components/magicui/shiny-button";
 import { Navbar } from "@/components/navBar";
 import AboutUs from "@/components/pages/aboutUs";
 import Projects from "@/components/pages/projects";
@@ -29,6 +30,7 @@ const HqPage = () => {
                             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
                                 <div className="flex flex-col justify-center space-y-4">
                                     <div className="space-y-2">
+                                        <ShinyButton name="Site under construction"/>
                                         <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                                             Innovating Today for a &nbsp;
                                             
