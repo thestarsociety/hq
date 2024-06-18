@@ -22,25 +22,25 @@ export function Navbar({ className }: { className?: string }) {
               <ProductItem
                 title="Algochurn"
                 href="/algo"
-                src="/algo"
+                src="/placehold1.jpg"
                 description="Prepare for tech interviews like never before."
               />
               <ProductItem
                 title="Tailwind Master Kit"
                 href="/tuk"
-                src="/tuk"
+                src="/placehold2.jpg"
                 description="Production ready Tailwind css components for your next project"
               />
               <ProductItem
                 title="Moonbeam"
                 href="/moon"
-                src="/moon"
+                src="/placehold3.jpg"
                 description="Never write from scratch again. Go from idea to blog in minutes."
               />
               <ProductItem
                 title="Rogue"
                 href="/rogue"
-                src="/rogue"
+                src="/placehold4.jpg"
                 description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
               />
             </div>
