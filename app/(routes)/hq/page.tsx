@@ -9,6 +9,9 @@ import ContactUs from "@/components/pages/contactUs";
 import Footer from "@/components/pages/footer";
 import Projects from "@/components/pages/projects";
 import { MarqueeDemo } from "@/components/reviews";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 const HqPage = () => {
     return (
@@ -46,9 +49,15 @@ const HqPage = () => {
                                     </div>
                                     <div className="w-full max-w-sm space-y-2">
                                         {/* Form placeholder */}
-                                        <div>Form</div>
+                                        <form className="flex gap-2">
+                                            <Input type="email" placeholder="Enter your email" className="max-w-lg flex-1 bg-gray-900" />
+                                            <Button type="submit">Get Started</Button>
+                                        </form>
                                         <p className="text-xs text-gray-500 dark:text-gray-400">
-                                            Join us to create something cool{" "}
+                                            Sign up to unlock exclusive features and insights.{" "}
+                                            <Link href="#" className="underline underline-offset-2" prefetch={false}>
+                                            Terms &amp; Conditions
+                                            </Link>
                                         </p>
                                     </div>
                                 </div>

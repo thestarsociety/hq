@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 export function Navbar({ className }: { className?: string }) {
     const [active, setActive] = useState<string | null>(null);
     return (
-      <div
+        <div
         className={cn("absolute inset-x-0 max-w-2xl mx-auto", className)}
-      >
+        >
         <Menu setActive={setActive}>
           <MenuItem setActive={setActive} active={active} item="Services">
             <div className="flex flex-col space-y-4 text-sm">
@@ -55,5 +55,7 @@ export function Navbar({ className }: { className?: string }) {
           </MenuItem>
         </Menu>
       </div>
+
+
     );
   }
