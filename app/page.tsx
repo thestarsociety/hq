@@ -13,15 +13,9 @@ import { MultiStepLoader } from "@/components/magicui/multi-step-loader";
 import { XSquareIcon } from "lucide-react";
 
 const loadingStates = [
-  { text: "Calling Tony stark" },
-  { text: "Asking for his server" },
-  { text: "Uploading web files" },
-  { text: "Server setup complete" },
-  { text: "Calling him again" },
-  { text: "Asking him for money" },
-  { text: "Using the money to buy a ferrari" },
-  { text: "Asking you to sit in the ferrari" },
-  { text: "Sending you to the HQ" },
+  { text: "Connecting to server" },
+  { text: "Verifying SSL" },
+  { text: "Let's Go!" }
 ];
 
 export default function Home() {
