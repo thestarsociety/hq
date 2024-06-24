@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MultiStepLoader } from "@/components/magicui/multi-step-loader";
 import { XSquareIcon } from "lucide-react";
+import { ShinyButton } from "@/components/magicui/shiny-button";
 
 const loadingStates = [
   { text: "Connecting to server" },
@@ -50,6 +51,7 @@ export default function Home() {
         onComplete={handleComplete} // Set onComplete callback
       />
       <div className="z-10 text-center flex flex-col items-center justify-center space-y-5">
+        <ShinyButton name="🚀 Introducing Orion" urlPush="https://orion.thestarsociety.tech"/>
         {resolvedTheme === undefined ? (
           <Loader2 height={8} width={8} className="animate-spin" />
         ) : resolvedTheme === "dark" ? (
