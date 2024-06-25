@@ -1,42 +1,23 @@
-import type { Config } from "tailwindcss";
-const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
-const svgToDataUri = require("mini-svg-data-uri");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+import type { Config } from "tailwindcss"
 
-// Function to add CSS variables for colors
-function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({
-    ":root": newVars,
-  });
-}
-
-// Combined configuration
-const config: Config = {
-  darkMode: ["class"], // Include dark mode settings
+const config = {
+  darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx,js,jsx,mdx}', // Merge content paths
-    './components/**/*.{ts,tsx,js,jsx,mdx}',
-    './app/**/*.{ts,tsx,js,jsx,mdx}',
-  ],
-  prefix: "", // Include prefix settings
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
+  prefix: "",
   theme: {
     container: {
-      center: true, // Existing settings for container
+      center: true,
       padding: "2rem",
       screens: {
         "2xl": "1400px",
       },
     },
     extend: {
-      // Combine colors without overwriting
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -72,40 +53,12 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-      // Combine borderRadius settings
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      // Combine animations without conflicts
-      animation: {
-        marquee: "marquee var(--duration) linear infinite",
-        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        meteor: "meteor 5s linear infinite",
-        grid: "grid 15s linear infinite",
-        "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
-        slide: "slide var(--speed) ease-in-out infinite alternate",
-      },
-      // Combine keyframes without conflicts
       keyframes: {
-        "shine-pulse": {
-          "0%": {
-            "background-position": "0% 0%",
-          },
-          "50%": {
-            "background-position": "100% 100%",
-          },
-          to: {
-            "background-position": "0% 0%",
-          },
-        },
-        marquee: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(calc(-100% - var(--gap)))" },
-        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -114,63 +67,14 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        meteor: {
-          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
-          "70%": { opacity: "1" },
-          "100%": {
-            transform: "rotate(215deg) translateX(-500px)",
-            opacity: "0",
-          },
-        },
-        grid: {
-          "0%": { transform: "translateY(-50%)" },
-          "100%": { transform: "translateY(0)" },
-        },
-        "spin-around": {
-          "0%": {
-            transform: "translateZ(0) rotate(0)",
-          },
-          "15%, 35%": {
-            transform: "translateZ(0) rotate(90deg)",
-          },
-          "65%, 85%": {
-            transform: "translateZ(0) rotate(270deg)",
-          },
-          "100%": {
-            transform: "translateZ(0) rotate(360deg)",
-          },
-        },
-        slide: {
-          to: {
-            transform: "translate(calc(100cqw - 100%), 0)",
-          },
-        },
       },
-      // Combine background images
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
-  // Combine plugins without conflicts
-  plugins: [
-    require("tailwindcss-animate"),
-    addVariablesForColors,
-    function ({ matchUtilities, theme }: any) {
-      matchUtilities(
-        {
-          "bg-dot-thick": (value: any) => ({
-            backgroundImage: `url("${svgToDataUri(
-              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="2.5"></circle></svg>`
-            )}")`,
-          }),
-        },
-        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
-      );
-    },
-  ],
-} satisfies Config;
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config
 
-export default config;
+export default config
