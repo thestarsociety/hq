@@ -16,7 +16,7 @@ export default function Projects() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 gap-y-20 sm:grid-cols-2 lg:grid-cols-3">
           {/** add projects here */}
         <PinContainer
         title="/orion"

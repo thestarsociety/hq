@@ -17,7 +17,7 @@ export default function AboutUs() {
               <p className="mt-4 text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 Our mission is to empower to thrive in the digital age. We believe in the
                 transformative power of technology and are committed to providing innovative solutions that drive progress
-                and unlock new possibilities for absolutely free of cost.
+                and unlock new possibilities for absolutely minimal cost.
               </p>
             </div>
             <div>
