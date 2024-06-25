@@ -1,7 +1,5 @@
 "use client";
 
-import { Peoples } from "../peoples";
-
 export default function AboutUs() {
     return (
       <section className="w-full py-12 md:py-24 lg:py-32">
