@@ -1,3 +1,4 @@
+
 import WordRotate from '@/components/animated/word-rotate';
 import Spline from '@splinetool/react-spline/next';
 
@@ -10,16 +11,6 @@ export default function Home() {
       <div className='relative z-10 flex flex-col items-start justify-end h-full p-8 md:p-16 pointer-events-none'>
         <div className='absolute top-8 left-8'>
           {/**Image */}
-        </div>
-        <div className='absolute top-8 right-8'>
-          <nav>
-            <ul className='flex space-x-4 text-white'>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
         </div>
         <div className='flex flex-col items-start justify-center space-y-4 md:space-y-6 lg:space-y-8'>
           <h1 className='text-6xl md:text-7xl lg:text-9xl text-white font-bold'>Develop</h1>

@@ -1,15 +1,15 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { AnimatePresence, HTMLMotionProps, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 interface WordRotateProps {
   words: string[];
   duration?: number;
-  framerProps?: HTMLMotionProps<"h1">;
+  framerProps?: any;
   className?: string;
-  colors?: string[]; // Add an optional colors prop
+  colors?: string[];
 }
 
 export default function WordRotate({
@@ -19,21 +19,45 @@ export default function WordRotate({
     initial: { opacity: 0, y: -50 },
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: 50 },
-    transition: { duration: 0.25, ease: "easeOut" },
+    transition: { duration: 0.5, ease: "easeOut" }, // Increased duration for smoother transition
   },
   className,
   colors = ["#FF5733", "#33FF57", "#3357FF", "#FF33A5"], // Default colors if not provided
 }: WordRotateProps) {
   const [index, setIndex] = useState(0);
-
+  const [lastTime, setLastTime] = useState(Date.now());
+  
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, duration);
+    let animationFrameId: number;
 
-    // Clean up interval on unmount
-    return () => clearInterval(interval);
-  }, [words, duration]);
+    const animate = () => {
+      const now = Date.now();
+      if (now - lastTime >= duration) {
+        setIndex((prevIndex) => (prevIndex + 1) % words.length);
+        setLastTime(Date.now());
+      }
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    // Start the animation loop
+    animationFrameId = requestAnimationFrame(animate);
+
+    // Handle tab visibility changes
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        // Reset the lastTime to ensure smooth transitions when tab becomes active
+        setLastTime(Date.now());
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    // Clean up on component unmount
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [words, duration, lastTime]);
 
   const currentColor = colors[index % colors.length]; // Determine current color
 
@@ -43,7 +67,7 @@ export default function WordRotate({
         <motion.h1
           key={words[index]}
           className={cn(className)}
-          style={{ color: currentColor }} // Apply color dynamically
+          style={{ color: currentColor }}
           {...framerProps}
         >
           {words[index]}
