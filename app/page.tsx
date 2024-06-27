@@ -1,37 +1,35 @@
-"use client";
+import WordRotate from '@/components/animated/word-rotate';
+import Spline from '@splinetool/react-spline/next';
 
-import { TssHero } from "@/components/icons/tssHero";
-import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
-import { useRouter } from "next/navigation";
-
-const HomePage = () => {
-
-    const router = useRouter();
-
-    const onClick = (
-        social: "github" | "instagram"
-    ) => {
-        if (social === "github") {
-            router.push("https://github.com/thestarsociety")
-        } else if (social === "instagram") {
-            router.push("https://instagram.com/tss_hq")
-        }   
-    }
-
-    return (
-        <div className="h-[50rem] w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
-            {/* Radial gradient for the container to give a faded look */}
-            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-
-            <div className="flex flex-col items-center justify-center">
-                <TssHero height={215} width={520} />
-                <div className="flex flex-row items-center justify-center mt-8 gap-x-6">
-                    <GitHubLogoIcon height={30} width={30} className="cursor-pointer hover:text-teal-400" onClick={() => onClick("github")}/>
-                    <InstagramLogoIcon height={30} width={30} className="cursor-pointer hover:text-orange-400" onClick={() => onClick("instagram")}/>
-                </div>
-            </div>
+export default function Home() {
+  return (
+    <main className='relative h-screen w-full bg-black'>
+      <div className='absolute inset-0'>
+        <Spline scene="https://prod.spline.design/PIYI8NxTHtCwGsV5/scene.splinecode" />
+      </div>
+      <div className='relative z-10 flex flex-col items-start justify-end h-full p-8 md:p-16 pointer-events-none'>
+        <div className='absolute top-8 left-8'>
+          {/**Image */}
         </div>
-    );
+        <div className='absolute top-8 right-8'>
+          <nav>
+            <ul className='flex space-x-4 text-white'>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div className='flex flex-col items-start justify-center space-y-4 md:space-y-6 lg:space-y-8'>
+          <h1 className='text-6xl md:text-7xl lg:text-9xl text-white font-bold'>Develop</h1>
+          <h1 className='text-6xl md:text-7xl lg:text-9xl text-white font-bold'>Innovate</h1>
+          <WordRotate words={["Launch", "Inspire", "Build"]} className='text-6xl md:text-7xl lg:text-9xl text-purple-400 font-bold' />
+        </div>
+        <p className='absolute bottom-8 right-8 text-white text-lg md:text-xl lg:text-2xl'>
+          Empowering Open Source Innovation.
+        </p>
+      </div>
+    </main>
+  );
 }
-
-export default HomePage;
