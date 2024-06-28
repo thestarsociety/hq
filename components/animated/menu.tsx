@@ -20,6 +20,11 @@ const Menu = () => {
   const openMenu = () => {
     const timeline = gsap.timeline();
 
+    gsap.set(overlayRef.current, {
+      height: 0,
+      width: 0,
+    });
+
     gsap.to(menuRef.current, {
       display: "flex",
       zIndex: 30,
@@ -126,7 +131,7 @@ const Menu = () => {
         </div>
       </div>
       <div ref={menuRef} className="main_menu fixed h-screen w-screen hidden justify-center items-center">
-        <div ref={overlayRef} className="overlay_purple absolute bg-grainy bg-gradient-to-b from-sky-400 to-sky-200 w-1/2 h-0">
+        <div ref={overlayRef} className="absolute bg-gradient-to-b from-sky-400 to-sky-200 w-1/2">
           <div className="absolute font-bold text-[9vw] bottom-0 left-0 overflow-hidden w-full">
             <div className="flex flex-col w-full">
               {headerData.header.map((item, index) => (
