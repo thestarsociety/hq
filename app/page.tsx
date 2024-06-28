@@ -13,9 +13,9 @@ export default function Home() {
           {/**Image */}
         </div>
         <div className='flex flex-col items-start justify-center space-y-4 md:space-y-6 lg:space-y-8'>
-          <h1 className='text-6xl md:text-7xl lg:text-9xl text-white font-bold'>Develop</h1>
-          <h1 className='text-6xl md:text-7xl lg:text-9xl text-white font-bold'>Innovate</h1>
-          <WordRotate words={["Launch", "Inspire", "Build"]} className='text-6xl md:text-7xl lg:text-9xl text-purple-400 font-bold' />
+          <h1 className='grainy-text text-6xl md:text-7xl lg:text-9xl text-white font-bold' data-text="Develop">Develop</h1>
+          <h1 className='grainy-text text-6xl md:text-7xl lg:text-9xl text-white font-bold' data-text="Innovate">Innovate</h1>
+          <WordRotate words={["Launch", "Inspire", "Build", "Ship"]} className='text-6xl md:text-7xl lg:text-9xl font-bold'/>
         </div>
         <p className='absolute bottom-8 right-8 text-white text-lg md:text-xl lg:text-2xl'>
           Empowering Open Source Innovation.

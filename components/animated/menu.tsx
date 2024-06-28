@@ -2,7 +2,7 @@
 
 import gsap from "gsap";
 import { useState, useRef, useEffect } from "react";
-import { header } from "@/components/json/header.json";
+import headerData from "@/components/json/header.json";
 
 const Menu = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -126,14 +126,16 @@ const Menu = () => {
         </div>
       </div>
       <div ref={menuRef} className="main_menu fixed h-screen w-screen hidden justify-center items-center">
-        <div ref={overlayRef} className="overlay_purple absolute bg-purple-400 w-1/2 h-0">
+        <div ref={overlayRef} className="overlay_purple absolute bg-grainy bg-gradient-to-b from-sky-400 to-sky-200 w-1/2 h-0">
           <div className="absolute font-bold text-[9vw] bottom-0 left-0 overflow-hidden w-full">
             <div className="flex flex-col w-full">
-              {header.map((item, index) => (
+              {headerData.header.map((item, index) => (
                 <p key={index} className="flex flex-col overflow-hidden w-full">
-                  <span className="menu_item relative px-4 pt-2 duration-150 -top-96 leading-none hover:bg-purple-800 hover:text-purple-400 w-full">
-                    {item.label}
-                  </span>
+                  <a href={item.href} className="px-4 pt-2 duration-150 -top-96 leading-none hover:bg-gray-900 hover:text-gray-100 w-full">
+                    <span className="menu_item relative px-4 duration-150 -top-96 leading-none w-full">
+                      {item.label}
+                    </span>
+                  </a>
                 </p>
               ))}
             </div>
