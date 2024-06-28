@@ -3,6 +3,7 @@
 import gsap from "gsap";
 import { useState, useRef, useEffect } from "react";
 import headerData from "@/components/json/header.json";
+import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 const Menu = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -118,15 +119,15 @@ const Menu = () => {
         <div>
           <button
             onClick={() => setToggleMenu(true)}
-            className={`text-white font-bold absolute z-30 text-xl duration-500 top-0 p-4 ${!toggleMenu ? "right-0" : "-right-96"}`}
+            className={`text-white font-bold absolute z-30 text-xl duration-700 top-0 p-4 ${!toggleMenu ? "right-0" : "-right-96"}`}
           >
-            Menu
+            <HamburgerMenuIcon height={25} width={25}/>
           </button>
           <button
             onClick={() => setToggleMenu(false)}
-            className={`text-white font-bold absolute z-30 text-xl duration-500 top-0 p-4 ${toggleMenu ? "right-0" : "-right-96"}`}
+            className={`text-white font-bold absolute z-30 text-xl duration-700 top-0 p-4 ${toggleMenu ? "right-0" : "-right-96"}`}
           >
-            Close
+            <Cross1Icon height={25} width={25}/>
           </button>
         </div>
       </div>
