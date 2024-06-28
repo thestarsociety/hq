@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link"
-import { TssIcon } from "../icons/tssLogo"
-import { LinkPreview } from "../magicui/link-preview";
+import { TssIcon } from "../icons/tssLogo;
 
 export default function Footer() {
   return (
