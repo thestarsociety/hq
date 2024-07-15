@@ -1,8 +1,8 @@
 export const WorkPage = () => {
     return (
-        <div>
-            <p>01</p>
-            <p>Lorem ipsum</p>
-        </div>
+        <>
+            <p className="text-xs">03</p>
+            <p className="text-lg">Work</p>
+        </>
     )
 }

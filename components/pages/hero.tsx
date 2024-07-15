@@ -1,8 +1,8 @@
 export const HeroPage = () => {
     return (
-        <div>
-            <p>01</p>
-            <p>Lorem ipsum</p>
-        </div>
+        <>
+            <p className="text-xs">01</p>
+            <p className="text-lg">Hello</p>
+        </>
     )
 }
