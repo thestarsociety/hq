@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn(
-        "h-full w-full bg-[#c0c0c0]",
+        "h-full w-full bg-[#F5F1E9]",
         inter.className
       )}>
         <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" disableTransitionOnChange>
