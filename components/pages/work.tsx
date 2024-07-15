@@ -1,7 +1,8 @@
 export const WorkPage = () => {
     return (
         <div>
-            Work
+            <p>01</p>
+            <p>Lorem ipsum</p>
         </div>
     )
 }

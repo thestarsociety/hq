@@ -1,7 +1,8 @@
 export const AboutPage = () => {
     return (
         <div>
-            About
+            <p>01</p>
+            <p>Lorem ipsum</p>
         </div>
     )
 }
