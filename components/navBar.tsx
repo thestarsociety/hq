@@ -35,7 +35,7 @@ export const NavBar: React.FC = () => {
   
     const sectionHeights: number[] = [];
     const accumulatedHeights: number[] = [];
-    const RATIO = 0.5;
+    const RATIO = 0.15;
   
     let accumulatedHeight = 0;
   
