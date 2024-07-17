@@ -1,4 +1,5 @@
 import Better from "../animation/better"
+import { CapabilitiesBlock } from "../blocks/capabilities";
 import { DopeText } from "../blocks/dopeText";
 import { MissionBlock } from "../blocks/mission"
 import { Tabs } from "../blocks/tabbedBlock";
@@ -66,6 +67,10 @@ export const ApproachSection = () => {
 
             {/* Approach-section-4 */}
             <Tabs tabs={tabData}/>
+            
+            {/* Approach-section-5 */}
+            <DopeText text="Our Capabilities" backgroundColor="bg-mutedcoral" leftText="star" rightText="society"/>
+            <CapabilitiesBlock />
         </div>
     )
 }
