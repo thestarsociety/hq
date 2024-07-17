@@ -12,24 +12,24 @@ const rowsData = [
 
 const tabData = [
     { title: "One Team", value: "one-team", content: (
-        <h1>
+        <>
             Our clients become part of <span className="text-mutedcoral">our team,</span> and our team a part of their company.
-        </h1>
+        </>
     ) },
     { title: "Creator Led", value: "creator-led", content: (
-        <h1>
+        <>
             Every team member’s higher priority is to <span className="text-mutedcoral">make the difference.</span>
-        </h1>
+        </>
     ) },
     { title: "Phase Zero", value: "phase-zero", content: (
-        <h1>
+        <>
             The project starts when we <span className="text-mutedcoral">first meet.</span> Every interaction shapes the work.
-        </h1>
+        </>
     ) },
     { title: "Anti Transactional", value: "anti-transactional", content: (
-        <h1>
+        <>
             We build long relationships, we want to become a <span className="text-mutedcoral">part of your journey.</span>
-        </h1>
+        </>
     ) },
 ];
 

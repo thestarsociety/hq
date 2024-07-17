@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export const TeamSection = () => {
     return (
         <div className="w-full mt-5 mb-20">
@@ -5,10 +7,30 @@ export const TeamSection = () => {
                 <p>01</p>
                 <p>The Star Society</p>
             </div>
-            <div className="w-full h-full p-[20px] border-[1.5px] border-black rounded-[20px] bg-sagegreen text-white">
-                <h1 className="font-semibold text-4xl">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. &nbsp; In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+            <div className="w-full h-full p-[20px] border-[1.5px] hover:border-black rounded-[20px] bg-sagegreen text-white">
+                <p className="text-8xl p-4">04</p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <h1 className="font-semibold text-[150px] p-4">
+                    Team
                 </h1>
+            </div>
+
+            {/* Node display */}
+            <div className="w-full h-auto p-[20px] border-[1.5px] hover:border-black rounded-[20px] bg-sagegreen text-white mt-4">
+                <Image 
+                    src="/assets/node-display.svg"
+                    alt="node display"
+                    width={1190}
+                    height={720}
+                />
             </div>
         </div>
     )
