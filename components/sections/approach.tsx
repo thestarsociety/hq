@@ -1,6 +1,12 @@
 import Better from "../animation/better"
 import { MissionBlock } from "../blocks/mission"
 
+const rowsData = [
+    { number: "01", title: "Challenge", headline: "globally while ensuring fair tech access.", highlightedText: "Innovate" },
+    { number: "02", title: "Goal", headline: "in the world and helping them make the best work of their lives.", highlightedText: "Finding the best talent" },
+    // Add more rows as needed
+  ];
+
 export const ApproachSection = () => {
     return (
         <div className="w-full mt-5 mb-20">
@@ -27,7 +33,7 @@ export const ApproachSection = () => {
             {/* Approach-section-1 */}
             <Better />
             {/* Approach-section-2 */}
-            <MissionBlock />
+            <MissionBlock rows={rowsData}/>
         </div>
     )
 }
