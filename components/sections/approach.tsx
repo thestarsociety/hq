@@ -1,4 +1,5 @@
 import Better from "../animation/better"
+import { DopeText } from "../blocks/dopeText";
 import { MissionBlock } from "../blocks/mission"
 
 const rowsData = [
@@ -34,6 +35,10 @@ export const ApproachSection = () => {
             <Better />
             {/* Approach-section-2 */}
             <MissionBlock rows={rowsData}/>
+            {/* Approach-section-3 */}
+            <DopeText text="Independent in" backgroundColor="bg-mutedcoral"/>
+            <DopeText text="Ownership" backgroundColor="bg-mutedcoral"/>
+            <DopeText text="& Spirit." backgroundColor="bg-mutedcoral"/>
         </div>
     )
 }

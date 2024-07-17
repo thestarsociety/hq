@@ -22,7 +22,7 @@ export const MissionBlock: React.FC<MissionBlockProps> = ({ rows }) => {
           <React.Fragment key={index}>
             <div className="flex flex-row items-start w-full m-[3.33vw]">
               <div className="flex w-[20%]">
-                <h2 className="flex flex-col items-start text-[2vw] font-semibold leading-[2.2vw] mt-[1.7vw] ml-[10px] p-0">
+                <h2 className="flex flex-col items-start text-[2vw] font-medium leading-[2.2vw] mt-[1.7vw] ml-[10px] p-0">
                   {row.number && (
                     <span className="flex h-[1.7vw] w-[3vw] items-center border-[1px] border-zinc-900 rounded-[1.7vw] text-[1.3vw] justify-center mb-[0.5vw] pr-[0.27vw] text-zinc-950">
                       {row.number}
