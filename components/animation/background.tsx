@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { AsciiEffect } from 'three/addons/effects/AsciiEffect.js';
 import { TrackballControls } from 'three/addons/controls/TrackballControls.js';
+import { cn } from '@/lib/utils';
 
 const AsciiBackground = ({ children, className }
     : { children: React.ReactNode, className?: string }
@@ -81,7 +82,10 @@ const AsciiBackground = ({ children, className }
     }, []);
 
     return (
-        <div ref={containerRef} className={`relative w-full h-full overflow-hidden ${className}`}>
+        <div ref={containerRef} className={cn(
+            "relative h-full w-full overflow-hidden",
+            className
+        )}>
             <div className="absolute top-0 left-0 w-full h-full z-0" ref={asciiRef}></div>
             <div className="relative z-10">
                 {children}

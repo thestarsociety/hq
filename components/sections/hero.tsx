@@ -174,13 +174,16 @@ export const HeroSection = () => {
             </div>
 
             {/* Hero-section-4 */}
-            <div className="w-full h-screen p-[20px] mt-4 flex items-center justify-center relative overflow-hidden">
-            <AsciiBackground className="w-full h-full border-[1.5px] border-zinc-900 rounded-[20px] bg-minimalteal flex items-center justify-center relative">
+            <div className="w-full h-screen mt-4 flex items-center justify-center relative overflow-hidden">
+            <AsciiBackground className="w-full h-screen border-[1.5px] border-zinc-900 rounded-[20px] bg-minimalteal flex items-center justify-center relative">
                 <h1 className="text-[300px] font-semibold text-white text-center relative z-10">
                     Infinity
                 </h1>
             </AsciiBackground>
             </div>
+
+            {/* Hero-section-5 */}
+            
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import Better from "../animation/better"
+import { MissionBlock } from "../blocks/mission"
 
 export const ApproachSection = () => {
     return (
@@ -25,6 +26,8 @@ export const ApproachSection = () => {
 
             {/* Approach-section-1 */}
             <Better />
+            {/* Approach-section-2 */}
+            <MissionBlock />
         </div>
     )
 }
