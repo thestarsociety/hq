@@ -16,10 +16,10 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { id: 'hero', component: HeroPage, bgColor: 'bg-minimalteal' },
-  { id: 'approach', component: ApproachPage, bgColor: 'bg-mutedcoral' },
+  { id: 'hero', component: HeroPage, bgColor: 'bg-rangueOrange' },
+  { id: 'approach', component: ApproachPage, bgColor: 'bg-spacePurple' },
   { id: 'work', component: WorkPage, bgColor: 'bg-dustylavender' },
-  { id: 'team', component: TeamPage, bgColor: 'bg-sagegreen' },
+  { id: 'team', component: TeamPage, bgColor: 'bg-quasarBlue' },
   { id: 'careers', component: CareersPage, bgColor: 'bg-subduednavy' },
   { id: 'contact', component: ContactPage, bgColor: 'bg-warmtaupe' },
   { id: 'index', component: IndexPage, bgColor: 'bg-mellowyellow' },

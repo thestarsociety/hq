@@ -7,8 +7,8 @@ import { Separator } from "../ui/separator"
 
 const rowsData = [
     { title: "Our mission", headline: "We are building star society to:"},
-    { number: "01", title: "Challenge", headline: "and growth using opensource.", highlightedText: "Inspire innovation", highlightedTextColor: "text-minimalteal" },
-    { number: "02", title: "Goal", headline: "a better future for all.", highlightedText: "Design", highlightedTextColor: "text-minimalteal"  },
+    { number: "01", title: "Challenge", headline: "and growth using opensource.", highlightedText: "Inspire innovation", highlightedTextColor: "text-rangueOrange" },
+    { number: "02", title: "Goal", headline: "a better future for all.", highlightedText: "Design", highlightedTextColor: "text-rangueOrange"  },
   ];
 
 export const HeroSection = () => {
@@ -18,7 +18,7 @@ export const HeroSection = () => {
                 <p>01</p>
                 <p>Hello</p>
             </div>
-            <div className="w-full h-full p-[20px] border-[1.5px] hover:border-black rounded-[20px] bg-minimalteal text-white">
+            <div className="w-full h-full p-[20px] border-[1.5px] hover:border-black rounded-[20px] bg-rangueOrange text-white">
                 <p className="text-8xl p-4">01</p>
                 <br />
                 <br />
@@ -49,14 +49,14 @@ export const HeroSection = () => {
                             </h2>
                         </div>
                         <div className="basis-2/3 flex items-center justify-center">
-                            <h1 className="font-semibold text-minimalteal text-[170px]">
+                            <h1 className="font-semibold text-rangueOrange text-[170px]">
                             The
                             </h1>
                         </div>
                     </div>
                     <Separator className="bg-zinc-800"/>
                     <div className="flex items-center justify-center"> {/* Start to align */}
-                        <h1 className="font-semibold text-minimalteal text-[170px]">
+                        <h1 className="font-semibold text-rangueOrange text-[170px]">
                             Star Society
                         </h1>
                     </div>
@@ -64,7 +64,7 @@ export const HeroSection = () => {
             </div>
 
             {/* Hero-section-2 */}
-            <div className="w-full h-full p-[20px] border-[1.5px] border-zinc-900 rounded-[20px] bg-minimalteal mt-4">
+            <div className="w-full h-full p-[20px] border-[1.5px] border-zinc-900 rounded-[20px] bg-rangueOrange mt-4">
                 <div className="flex flex-col p-2"> {/* Main flexbox */}
                     <div className="flex flex-col">
                         <div className="flex flex-row p-2">
@@ -139,7 +139,7 @@ export const HeroSection = () => {
 
             {/* Hero-section-4 */}
             <div className="w-full h-screen mt-4 flex items-center justify-center relative overflow-hidden">
-            <AsciiBackground className="w-full h-screen border-[1.5px] border-zinc-900 rounded-[20px] bg-minimalteal flex items-center justify-center relative">
+            <AsciiBackground className="w-full h-screen border-[1.5px] border-zinc-900 rounded-[20px] bg-rangueOrange flex items-center justify-center relative">
                 <h1 className="text-[300px] font-semibold text-white text-center relative z-10">
                     Infinity
                 </h1>

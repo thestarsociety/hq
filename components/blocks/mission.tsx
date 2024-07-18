@@ -36,7 +36,7 @@ export const MissionBlock: React.FC<MissionBlockProps> = ({ rows }) => {
                 {row.highlightedText && (
                     <>
                       <span className={cn(
-                        "text-mutedcoral",
+                        "text-spacePurple",
                         row.highlightedTextColor
                       )}>
                         {row.highlightedText}

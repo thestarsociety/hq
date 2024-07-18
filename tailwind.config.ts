@@ -56,10 +56,10 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         //custom
-        minimalteal: {
+        minimalTeal: {
           DEFAULT: "#5CBDB9"
         },
-        mutedcoral: {
+        mutedCoral: {
           DEFAULT: "#E47A6A"
         },
         dustylavender: {
@@ -76,6 +76,28 @@ const config = {
         },
         mellowyellow: {
           DEFAULT: "#DCC48E"
+        },
+        //bright
+        rangueOrange: {
+          DEFAULT: "#FF3D00"
+        },
+        spacePurple: {
+          DEFAULT: "#6506DF"
+        },
+        wrathBlack: {
+          DEFAULT: "#000000"
+        },
+        quasarBlue: {
+          DEFAULT: "#2835F8"
+        },
+        vibrantPink: {
+          DEFAULT: "#FF003D"
+        },
+        lemonYellow: {
+          DEFAULT: "#FFD800"
+        },
+        neonGreen: {
+          DFEAULT: "#05FF00"
         }
       },
       borderRadius: {

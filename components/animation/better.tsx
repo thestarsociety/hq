@@ -7,7 +7,7 @@ export default function Better() {
         Transform ideas
       </h1>
       <Spline
-        scene="https://prod.spline.design/jvV9yMG3wSkxztgm/scene.splinecode" 
+        scene="https://prod.spline.design/EJRQXkoDWOIvGQS7/scene.splinecode" 
         className='absolute inset-0 w-full h-full rounded-[20px]'
       />
     </div>

@@ -13,22 +13,22 @@ const rowsData = [
 const tabData = [
     { title: "One Team", value: "one-team", content: (
         <>
-            Our clients become part of <span className="text-mutedcoral">our team,</span> and our team a part of their company.
+            Our clients become part of <span className="text-spacePurple">our team,</span> and our team a part of their company.
         </>
     ) },
     { title: "Creator Led", value: "creator-led", content: (
         <>
-            Every team member’s higher priority is to <span className="text-mutedcoral">make the difference.</span>
+            Every team member’s higher priority is to <span className="text-spacePurple">make the difference.</span>
         </>
     ) },
     { title: "Phase Zero", value: "phase-zero", content: (
         <>
-            The project starts when we <span className="text-mutedcoral">first meet.</span> Every interaction shapes the work.
+            The project starts when we <span className="text-spacePurple">first meet.</span> Every interaction shapes the work.
         </>
     ) },
     { title: "Anti Transactional", value: "anti-transactional", content: (
         <>
-            We build long relationships, we want to become a <span className="text-mutedcoral">part of your journey.</span>
+            We build long relationships, we want to become a <span className="text-spacePurple">part of your journey.</span>
         </>
     ) },
 ];
@@ -40,7 +40,7 @@ export const ApproachSection = () => {
                 <p>02</p>
                 <p>Approach</p>
             </div>
-            <div className="w-full h-full p-[20px] border-[1.5px] hover:border-black rounded-[20px] bg-mutedcoral text-white">
+            <div className="w-full h-full p-[20px] border-[1.5px] hover:border-black rounded-[20px] bg-spacePurple text-white">
                 <p className="text-8xl p-4">02</p>
                 <br />
                 <br />
@@ -61,15 +61,15 @@ export const ApproachSection = () => {
             {/* Approach-section-2 */}
             <MissionBlock rows={rowsData}/>
             {/* Approach-section-3 */}
-            <DopeText text="Independent in" backgroundColor="bg-mutedcoral" leftText="star" rightText="society"/>
-            <DopeText text="Ownership" backgroundColor="bg-mutedcoral" leftText="society" rightText="star"/>
-            <DopeText text="& Spirit." backgroundColor="bg-mutedcoral" leftText="star" rightText="society"/>
+            <DopeText text="Independent in" backgroundColor="bg-spacePurple" leftText="star" rightText="society"/>
+            <DopeText text="Ownership" backgroundColor="bg-spacePurple" leftText="society" rightText="star"/>
+            <DopeText text="& Spirit." backgroundColor="bg-spacePurple" leftText="star" rightText="society"/>
 
             {/* Approach-section-4 */}
             <Tabs tabs={tabData}/>
             
             {/* Approach-section-5 */}
-            <DopeText text="Our Capabilities" backgroundColor="bg-mutedcoral" leftText="star" rightText="society"/>
+            <DopeText text="Our Capabilities" backgroundColor="bg-spacePurple" leftText="star" rightText="society"/>
             <CapabilitiesBlock />
         </div>
     )
