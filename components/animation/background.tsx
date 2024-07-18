@@ -45,7 +45,7 @@ const AsciiBackground = ({ children, className }
 
             effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true });
             effect.setSize(containerRef.current!.offsetWidth, containerRef.current!.offsetHeight);
-            effect.domElement.style.color = 'white';
+            effect.domElement.style.color = 'black';
             effect.domElement.style.backgroundColor = 'transparent';
 
             asciiRef.current!.appendChild(effect.domElement);

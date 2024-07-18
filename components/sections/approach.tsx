@@ -1,4 +1,7 @@
+"use client";
+
 import Better from "../animation/better"
+import AnimatedDopeText from "../blocks/animatedDopeText";
 import { CapabilitiesBlock } from "../blocks/capabilities";
 import { DopeText } from "../blocks/dopeText";
 import { MissionBlock } from "../blocks/mission"
@@ -64,6 +67,9 @@ export const ApproachSection = () => {
             <DopeText text="Independent in" backgroundColor="bg-spacePurple" leftText="star" rightText="society"/>
             <DopeText text="Ownership" backgroundColor="bg-spacePurple" leftText="society" rightText="star"/>
             <DopeText text="& Spirit." backgroundColor="bg-spacePurple" leftText="star" rightText="society"/>
+
+            {/* Animated Dope */}
+            <AnimatedDopeText text="A culture built for constant adaption" backgroundColor="bg-spacePurple" arrowColor="#05FF00"/>
 
             {/* Approach-section-4 */}
             <Tabs tabs={tabData}/>
