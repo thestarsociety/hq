@@ -5,6 +5,7 @@ import AnimatedDopeText from "../blocks/animatedDopeText";
 import { CapabilitiesBlock } from "../blocks/capabilities";
 import { DopeText } from "../blocks/dopeText";
 import { MissionBlock } from "../blocks/mission"
+import { SectionWelcome } from "../blocks/sectionWelcome";
 import { Tabs } from "../blocks/tabbedBlock";
 
 const rowsData = [
@@ -43,21 +44,8 @@ export const ApproachSection = () => {
                 <p>02</p>
                 <p>Approach</p>
             </div>
-            <div className="w-full h-full p-[20px] border-[1.5px] hover:border-black rounded-[20px] bg-spacePurple text-white">
-                <p className="text-8xl p-4">02</p>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <h1 className="font-semibold text-[150px] p-4">
-                    Approach
-                </h1>
-            </div>
+            
+            <SectionWelcome backgroundColor="bg-spacePurple" sectionText="Approach" sectionNo="02"/>
 
             {/* Approach-section-1 */}
             <Better />

@@ -3,6 +3,7 @@
 import AsciiBackground from "../animation/background";
 import { MissionBlock } from "../blocks/mission";
 import QuoteBlock from "../blocks/quoteBlock";
+import { SectionWelcome } from "../blocks/sectionWelcome";
 import { Separator } from "../ui/separator"
 
 const rowsData = [
@@ -23,21 +24,7 @@ export const HeroSection = () => {
                 <p>01</p>
                 <p>Hello</p>
             </div>
-            <div className="w-full h-full p-[20px] border-[1.5px] hover:border-black rounded-[20px] bg-rangueOrange text-white">
-                <p className="text-8xl p-4">01</p>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <h1 className="font-semibold text-[150px] p-4">
-                    Hello
-                </h1>
-            </div>
+            <SectionWelcome backgroundColor="bg-rangueOrange" sectionText="Hello" sectionNo="01"/>
             {/* Hero-section-1 */}
             <div className="w-full h-full p-[20px] border-[1.5px] border-zinc-900 rounded-[20px] bg-transparent mt-4">
                 <div className="flex flex-col p-2">

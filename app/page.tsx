@@ -1,4 +1,4 @@
-
+"use client";
 
 // Sections
 import { ApproachSection } from "@/components/sections/approach";

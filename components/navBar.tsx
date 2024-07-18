@@ -18,7 +18,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { id: 'hero', component: HeroPage, bgColor: 'bg-rangueOrange' },
   { id: 'approach', component: ApproachPage, bgColor: 'bg-spacePurple' },
-  { id: 'work', component: WorkPage, bgColor: 'bg-dustylavender' },
+  { id: 'work', component: WorkPage, bgColor: 'bg-wrathBlack' },
   { id: 'team', component: TeamPage, bgColor: 'bg-quasarBlue' },
   { id: 'careers', component: CareersPage, bgColor: 'bg-subduednavy' },
   { id: 'contact', component: ContactPage, bgColor: 'bg-warmtaupe' },
