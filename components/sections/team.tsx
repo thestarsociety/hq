@@ -4,10 +4,29 @@ import Image from "next/image"
 import QuoteBlock from "../blocks/quoteBlock";
 import StarSociety from "../blocks/abstractText";
 import AnimatedDopeText from "../blocks/animatedDopeText";
+import { Tabs } from "../blocks/tabbedBlock";
 
 const quotes: string[][] = [
     ["Finding the best", "talent in the world and", "helping them make the", "best work of their lives."]
   ];
+
+const tabData = [
+    { title: "( The EveryWhere Company)", value: "everywhere-company", content: (
+        <>
+            The freedom and flexibilty to work & collaborate everywhere.
+        </>
+    ), accentTextColour: "text-quasarBlue", numberBgColor: "bg-quasarBlue", backgroundImage: "/assets/talent-tab-block-1.svg" },
+    { title: "( The Academy )", value: "academy", content: (
+        <>
+            Bringing up the next generation of creative resources for opensource leaders.
+        </>
+    ), accentTextColour: "text-quasarBlue", numberBgColor: "bg-quasarBlue", backgroundImage: "/assets/talent-tab-block-2.svg" },
+    { title: "( The Creative Community )", value: "creative-community", content: (
+        <>
+            Connecting with creatives around the world and inspiring them to join our endeavour.
+        </>
+    ), accentTextColour: "text-quasarBlue", numberBgColor: "bg-quasarBlue", backgroundImage: "/assets/talent-tab-block-3.svg" },
+];
 
 export const TeamSection = () => {
     return (
@@ -88,6 +107,9 @@ export const TeamSection = () => {
                 backgroundColor="bg-quasarBlue"
                 arrowColor="#FF3D00"
             />
+
+            {/* Tabbed block */}
+            <Tabs tabs={tabData} footerTitle="Team" footerColor="text-quasarBlue"/>
         </div>
     )
 }

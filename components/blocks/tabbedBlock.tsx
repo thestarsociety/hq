@@ -12,7 +12,7 @@ type Tab = {
   backgroundImage?: string;
 };
 
-export const Tabs = ({ tabs: propTabs, footerTitle = "Approach" }: { tabs: Tab[]; footerTitle?: string  }) => {
+export const Tabs = ({ tabs: propTabs, footerTitle = "Approach", footerColor = "text-spacePurple" }: { tabs: Tab[]; footerTitle?: string; footerColor?: string  }) => {
   const [active, setActive] = useState<Tab>(propTabs[0]);
   const [tabs, setTabs] = useState<Tab[]>(propTabs);
   const [hovering, setHovering] = useState(false);
@@ -79,12 +79,12 @@ export const Tabs = ({ tabs: propTabs, footerTitle = "Approach" }: { tabs: Tab[]
           >
             {tab.backgroundImage && (
               <Image
-                src={tab.backgroundImage}
-                alt={`Background for ${tab.title}`}
-                layout="fill"
-                objectFit="cover"
-                className="z-0"
-              />
+              src={tab.backgroundImage}
+              alt={`Background for ${tab.title}`}
+              objectFit="contain"
+              className="z-0 p-[100px]"
+              layout="fill"
+            />
             )}
             <div className="z-10 relative">
               <h1 className="text-[100px] text-zinc-900 tracking-tighter leading-tight m-8 p-8">
@@ -95,7 +95,7 @@ export const Tabs = ({ tabs: propTabs, footerTitle = "Approach" }: { tabs: Tab[]
         ))}
       </div>
       <div className="absolute bottom-8 left-0 right-0 flex items-center justify-between px-12">
-        <div className="text-spacePurple">({footerTitle})</div>
+        <div className={footerColor}>({footerTitle})</div>
           <div className="section-number">
             ● {`0${tabs.indexOf(active) + 1} / ${tabs.length}`}
           </div>
