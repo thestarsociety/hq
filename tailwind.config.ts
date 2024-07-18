@@ -98,6 +98,12 @@ const config = {
         },
         neonGreen: {
           DFEAULT: "#05FF00"
+        },
+        tssWhite: {
+          DEFAULT: "#F4E9E1"
+        },
+        duskBlack: {
+          DEFAULT: "#0E0E0E"
         }
       },
       borderRadius: {

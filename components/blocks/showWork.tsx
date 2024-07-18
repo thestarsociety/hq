@@ -15,12 +15,12 @@ export const ShowWork = ({ categoryTag, backgroundColor, brandName, brandLogo }:
             backgroundColor
         )}>
             <div className="p-2 flex items-center justify-center">
-                <p className="text-zinc-900 ml-4">
-                    ({brandName})
+                <p className="text-tssWhite text-5xl ml-4">
+                    {brandName}
                 </p>
             </div>
             <div className="p-2 flex items-center justify-center">
-                <h1 className="text-white text-[100px]">
+                <h1 className="text-zinc-400 text-2xl">
                     {categoryTag}
                 </h1>
             </div>
@@ -28,9 +28,9 @@ export const ShowWork = ({ categoryTag, backgroundColor, brandName, brandLogo }:
                 <Image 
                     src={brandLogo}
                     alt="Brand Logo"
-                    layout="fill"
-                    objectFit="contain"
-                    className="grayscale"
+                    width={80}
+                    height={80}
+                    
                 />
             </div>
         </div>

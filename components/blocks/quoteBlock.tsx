@@ -21,7 +21,7 @@ const QuoteSection: React.FC<QuoteSectionProps> = ({ number, lines }) => (
         </Button>
       </div>
       <div className="basis-7/8 flex items-center">
-        <h1 className="text-[100px] text-white font-medium">
+        <h1 className="text-[100px] text-tssWhite font-medium">
           {lines[0]}
         </h1>
       </div>
@@ -30,7 +30,7 @@ const QuoteSection: React.FC<QuoteSectionProps> = ({ number, lines }) => (
       <React.Fragment key={index}>
         <Separator className="bg-zinc-800 h-[0.5px]" />
         <div className="py-1 tracking-tight">
-          <h1 className="text-white font-medium text-[100px] leading-snug">
+          <h1 className="text-tssWhite font-medium text-[100px] leading-snug">
             {line}
           </h1>
         </div>

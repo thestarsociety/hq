@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionWelcome } from "../blocks/sectionWelcome"
+import { ShowWork } from "../blocks/showWork";
 
 export const WorkSection = () => {
     return (
@@ -12,6 +13,9 @@ export const WorkSection = () => {
            
            {/* welcome */}
            <SectionWelcome backgroundColor="bg-wrathBlack" sectionText="Work" sectionNo="03"/>
+
+           {/* Work ShowCase */}
+           <ShowWork brandName="Saturn" backgroundColor="bg-duskBlack" brandLogo="/assets/title-block-n.svg" categoryTag="Brand Design"/>
         </div>
     )
 }

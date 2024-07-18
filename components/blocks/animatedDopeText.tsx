@@ -30,7 +30,7 @@ export const AnimatedDopeText = ({ text, backgroundColor, arrowColor }: Animated
                 <AnimatedArrow color={arrowColor} />
             </div>
             <div className="flex items-center justify-center">
-                <h1 className="text-white text-2xl">
+                <h1 className="text-tssWhite text-2xl">
                     {text}
                 </h1>
             </div>

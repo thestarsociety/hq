@@ -105,7 +105,7 @@ export const NavBar: React.FC = () => {
       {navItems.map(item => (
         <div
           key={item.id}
-          className={`relative flex flex-col justify-between mb-5 p-5 border-[1.5px] hover:border-black rounded-[20px] transition-all duration-500 ${item.bgColor} text-white ${
+          className={`relative flex flex-col justify-between mb-5 p-5 border-[1.5px] hover:border-black rounded-[20px] transition-all duration-500 ${item.bgColor} text-tssWhite ${
             activeSection === item.id ? 'h-[150px]' : 'h-[100px]'
           }`}
         >

@@ -19,7 +19,7 @@ export const DopeText = ({ text, backgroundColor, leftText, rightText }: DopeTex
                 </p>
             </div>
             <div className="p-2 flex items-center justify-center">
-                <h1 className="text-white text-[100px]">
+                <h1 className="text-tssWhite text-[100px]">
                     {text}
                 </h1>
             </div>

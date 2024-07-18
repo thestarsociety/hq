@@ -9,7 +9,7 @@ interface SectionWelcomeProps {
 export const SectionWelcome = ({ backgroundColor, sectionText, sectionNo }: SectionWelcomeProps) => {
     return (
         <div className={cn(
-            "w-full h-full p-[20px] border-[1.5px] hover:border-black rounded-[20px] bg-spacePurple text-white",
+            "w-full h-full p-[20px] border-[1.5px] hover:border-black rounded-[20px] bg-spacePurple text-tssWhite",
             backgroundColor
         )}>
                 <p className="text-8xl p-4">{sectionNo}</p>
