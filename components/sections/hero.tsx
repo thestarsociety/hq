@@ -2,13 +2,18 @@
 
 import AsciiBackground from "../animation/background";
 import { MissionBlock } from "../blocks/mission";
-import { Button } from "../ui/button"
+import QuoteBlock from "../blocks/quoteBlock";
 import { Separator } from "../ui/separator"
 
 const rowsData = [
     { title: "Our mission", headline: "We are building star society to:"},
     { number: "01", title: "Challenge", headline: "and growth using opensource.", highlightedText: "Inspire innovation", highlightedTextColor: "text-rangueOrange" },
     { number: "02", title: "Goal", headline: "a better future for all.", highlightedText: "Design", highlightedTextColor: "text-rangueOrange"  },
+  ];
+
+const quotes: string[][] = [
+    ["In candor, we find", "the freedom to reach", "the stars."],
+    ["Isolated efforts", "creates boundaries in", "the vast universe of", "ideas. Together we map", "new possibilities."]
   ];
 
 export const HeroSection = () => {
@@ -63,76 +68,8 @@ export const HeroSection = () => {
                 </div>
             </div>
 
-            {/* Hero-section-2 */}
-            <div className="w-full h-full p-[20px] border-[1.5px] border-zinc-900 rounded-[20px] bg-rangueOrange mt-4">
-                <div className="flex flex-col p-2"> {/* Main flexbox */}
-                    <div className="flex flex-col">
-                        <div className="flex flex-row p-2">
-                            <div className="basis-1/8 flex items-center mr-20">
-                            <Button size="smalltext" className="rounded-[20px] bg-transparent text-black border-[1.5px] border-zinc-900 pointer-events-none">
-                                01
-                            </Button>
-                            </div>
-                            <div className="basis-7/8 flex items-center">
-                            <h1 className="text-[100px] text-white font-semibold">
-                                In candor, we find
-                            </h1>
-                            </div>
-                        </div>
-                        <Separator className="bg-zinc-800"/>
-                        <div className="p-1">
-                            <h1 className="text-white font-semibold text-[100px]">
-                                the freedom to reach
-                            </h1>
-                        </div>
-                        <Separator className="bg-zinc-800"/>
-                        <div className="p-1">
-                            <h1 className="text-white font-semibold text-[100px]">
-                                the stars.
-                            </h1>
-                        </div>
-                    </div>
-                    {/* 02 */}
-                    <div className="flex flex-col mt-[100px]">
-                        <div className="flex flex-row p-2">
-                            <div className="basis-1/8 flex items-center mr-20">
-                            <Button size="smalltext" className="rounded-[20px] bg-transparent text-black border-[1.5px] border-zinc-900 pointer-events-none">
-                                02
-                            </Button>
-                            </div>
-                            <div className="basis-7/8 flex items-center">
-                            <h1 className="text-[100px] text-white font-semibold">
-                                Isolated efforts
-                            </h1>
-                            </div>
-                        </div>
-                        <Separator className="bg-zinc-800"/>
-                        <div className="p-1">
-                            <h1 className="text-white font-semibold text-[100px]">
-                                creates boundaries in
-                            </h1>
-                        </div>
-                        <Separator className="bg-zinc-800"/>
-                        <div className="p-1">
-                            <h1 className="text-white font-semibold text-[100px]">
-                                the vast universe of
-                            </h1>
-                        </div>
-                        <Separator className="bg-zinc-800"/>
-                        <div className="p-1">
-                            <h1 className="text-white font-semibold text-[100px]">
-                                ideas. Together we map
-                            </h1>
-                        </div>
-                        <Separator className="bg-zinc-800 h-[0.5px]"/>
-                        <div className="p-1">
-                            <h1 className="text-white font-semibold text-[100px]">
-                                new possibilities.
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {/* Quotes */}
+            <QuoteBlock quotes={quotes} backgroundColor="bg-rangueOrange"/>
 
             {/* Hero-section-3 */}
             <MissionBlock rows={rowsData}/>

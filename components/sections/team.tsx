@@ -1,4 +1,13 @@
+"use client";
+
 import Image from "next/image"
+import QuoteBlock from "../blocks/quoteBlock";
+import StarSociety from "../blocks/abstractText";
+import AnimatedDopeText from "../blocks/animatedDopeText";
+
+const quotes: string[][] = [
+    ["Finding the best", "talent in the world and", "helping them make the", "best work of their lives."]
+  ];
 
 export const TeamSection = () => {
     return (
@@ -32,6 +41,53 @@ export const TeamSection = () => {
                     height={720}
                 />
             </div>
+
+            {/* Quote */}
+            <QuoteBlock quotes={quotes} backgroundColor="bg-quasarBlue"/>
+
+            {/* Abstract text */}
+            <StarSociety
+                topTextLeft={{
+                text: "The",
+                fontSize: "text-[200px]",
+                color: "text-quasarBlue"
+                }}
+                topTextRight={{
+                    text: "Star",
+                    fontSize: "text-[200px]",
+                    color: "text-quasarBlue",
+                    imageUrl: "/assets/title-block-s.svg",
+                    imageWidth:280,
+                    imageHeight:280
+                  }}
+                middleLeft={{
+                    content: "A super connector community created by TSS to connect the star peoples."
+                }}
+                middleRight={{
+                    text: "Talent",
+                    fontSize: "text-[200px]",
+                    color: "text-quasarBlue",
+                    imageUrl:"/assets/title-block-t.svg",
+                    imageHeight:280,
+                    imageWidth:280
+                }}
+                bottomText={{
+                    text: "Network",
+                    fontSize: "text-[200px]",
+                    color: "text-quasarBlue",
+                    imageUrl: "/assets/title-block-n.svg", // Optional
+                    imageWidth:280,
+                    imageHeight:280  // Optional
+                }}
+                gap="6" // Optional, defaults to "4"
+            />
+
+            {/* Animated Dope */}
+            <AnimatedDopeText 
+                text="Your Text"
+                backgroundColor="bg-quasarBlue"
+                className="text-rangueOrange"
+            />
         </div>
     )
 }
