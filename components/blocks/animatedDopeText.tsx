@@ -1,42 +1,33 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import UseAnimations from 'react-useanimations';
+import arrowDown from 'react-useanimations/lib/arrowDown';
 import { cn } from "@/lib/utils";
 
 interface AnimatedDopeTextProps {
     text: string;
     backgroundColor: string;
-    className: string
+    arrowColor: string
 }
 
-const arrowVariants = {
-    initial: { y: -100, opacity: 0 },
-    animate: { y: 0, opacity: 1, transition: { duration: 0.5 } },
-    exit: { y: 100, opacity: 0, transition: { duration: 0.5 } }
-};
+
 
 const AnimatedArrow = ({ color }: { color: string }) => {
     return (
-        <motion.div
-            variants={arrowVariants}
-            animate="visible"
-            transition={{ repeat: Infinity, repeatDelay: 1 }}
-            className='flex flex-row'
-        >
-            <ArrowDown size={24} className={cn("font-medium", color)} />
-            <ArrowDown size={24} className={cn("font-medium", color)} />
-        </motion.div>
+        <div className='flex flex-row'>
+            <UseAnimations animation={arrowDown} size={35} loop={true} strokeColor={color} speed={0.7}/>
+            <UseAnimations animation={arrowDown} size={35} loop={true} strokeColor={color} />
+        </div>
     );
 };
 
-export const AnimatedDopeText = ({ text, backgroundColor, className }: AnimatedDopeTextProps) => {
+export const AnimatedDopeText = ({ text, backgroundColor, arrowColor }: AnimatedDopeTextProps) => {
     return (
         <div className={cn(
             "w-full h-auto p-[20px] border-[1.5px] border-transparent rounded-[20px] mt-4 flex flex-row justify-between items-center",
             backgroundColor
         )}>
             <div className="flex justify-center">
-                <AnimatedArrow color={className} />
+                <AnimatedArrow color={arrowColor} />
             </div>
             <div className="flex items-center justify-center">
                 <h1 className="text-white text-2xl">
@@ -44,7 +35,7 @@ export const AnimatedDopeText = ({ text, backgroundColor, className }: AnimatedD
                 </h1>
             </div>
             <div className="flex justify-center">
-                <AnimatedArrow color={className} />
+                <AnimatedArrow color={arrowColor} />
             </div>
         </div>
     );

@@ -84,9 +84,9 @@ export const TeamSection = () => {
 
             {/* Animated Dope */}
             <AnimatedDopeText 
-                text="Your Text"
+                text="HOW WE WORK"
                 backgroundColor="bg-quasarBlue"
-                className="text-rangueOrange"
+                arrowColor="#FF3D00"
             />
         </div>
     )

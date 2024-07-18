@@ -1,17 +1,21 @@
 "use client";
-
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type Tab = {
   title: string;
   value: string;
   content?: React.ReactNode;
+  accentTextColour?: string;
+  numberBgColor?: string;
+  backgroundImage?: string;
 };
 
-export const Tabs = ({ tabs: propTabs }: { tabs: Tab[] }) => {
+export const Tabs = ({ tabs: propTabs, footerTitle = "Approach" }: { tabs: Tab[]; footerTitle?: string  }) => {
   const [active, setActive] = useState<Tab>(propTabs[0]);
   const [tabs, setTabs] = useState<Tab[]>(propTabs);
+  const [hovering, setHovering] = useState(false);
 
   const moveSelectedTabToTop = (idx: number) => {
     const newTabs = [...propTabs];
@@ -21,15 +25,13 @@ export const Tabs = ({ tabs: propTabs }: { tabs: Tab[] }) => {
     setActive(newTabs[0]);
   };
 
-  const [hovering, setHovering] = useState(false);
-
   return (
     <div className="flex flex-col items-start justify-start w-full aspect-[1190/630] border border-t-0 border-black rounded-[20px] rounded-b-2xl mb-4 overflow-hidden pt-[2px] relative mt-4">
       <div className="flex items-center justify-between w-[calc(100%+3px)] -mt-[2px] -ml-[1px] p-0">
         {propTabs.map((tab, idx) => (
           <div
             key={tab.title}
-            className={`flex items-center justify-between w-1/2 h-[60px] border border-black rounded-t-2xl ml-[-1px] cursor-pointer p-4 ${
+            className={`flex items-center justify-between w-1/2 h-[60px] border border-black rounded-t-2xl ml-[-1px] cursor-pointer p-6 ${
               active.value === tab.value ? "border-b-0" : ""
             }`}
             data-index={idx}
@@ -37,34 +39,66 @@ export const Tabs = ({ tabs: propTabs }: { tabs: Tab[] }) => {
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
           >
-            <h3 className={`tab-title ${active.value === tab.value ? "text-purple" : ""}`}>
+            <h3
+              className={`font-[400] text-lg ${
+                active.value === tab.value
+                  ? tab.accentTextColour || "text-spacePurple"
+                  : ""
+              }`}
+            >
               {tab.title}
             </h3>
-            <div className={`tab-number ${active.value === tab.value ? "text-offwhite bg-purple" : ""}`}>
+            <span
+              className={`flex h-[1.6vw] w-[2.4vw] items-center justify-center border-[1px] border-zinc-900 rounded-[1.7vw] text-[1vw] text-zinc-950 ${
+                active.value === tab.value
+                  ? `text-gray-50 border-none ${
+                      tab.numberBgColor || "bg-spacePurple"
+                    }`
+                  : ""
+              }`}
+            >
               {`0${idx + 1}`}
-            </div>
+            </span>
           </div>
         ))}
       </div>
-      <div className="flex w-full">
+      <div className="flex w-full h-[calc(100%-60px)] relative">
         {tabs.map((tab, idx) => (
           <motion.div
             key={tab.value}
-            className={`flex flex-col h-[100%-96px] pointer-events-none absolute top-12 w-full items-center justify-center ${active.value === tab.value ? "active" : ""}`}
+            className={`flex flex-col absolute top-0 left-0 w-full h-full items-center justify-center ${
+              active.value === tab.value ? "active" : ""
+            }`}
             data-index={idx}
-            style={{
-              transform: active.value === tab.value ? "translate(0px, 0px)" : "translate(0px, 120%) scale(0)",
+            initial={{ opacity: 0, y: 20 }}
+            animate={{
+              opacity: active.value === tab.value ? 1 : 0,
+              y: active.value === tab.value ? 0 : 20,
             }}
+            transition={{ duration: 0.2 }}
           >
-            <h1 className="text-[100px] text-zinc-900 tracking-tighter leading-tight m-8 p-8">
-              {tab.content}
-            </h1>
+            {tab.backgroundImage && (
+              <Image
+                src={tab.backgroundImage}
+                alt={`Background for ${tab.title}`}
+                layout="fill"
+                objectFit="cover"
+                className="z-0"
+              />
+            )}
+            <div className="z-10 relative">
+              <h1 className="text-[100px] text-zinc-900 tracking-tighter leading-tight m-8 p-8">
+                {tab.content}
+              </h1>
+            </div>
           </motion.div>
         ))}
       </div>
-      <div className="absolute bottom-[4.44vw] flex items-center justify-between self-center w-[calc(100%-96px)]">
-        <div className="text-purple">(Approach)</div>
-        <div className="section-number">● {`0${tabs.indexOf(active) + 1} / ${tabs.length}`}</div>
+      <div className="absolute bottom-8 left-0 right-0 flex items-center justify-between px-12">
+        <div className="text-spacePurple">({footerTitle})</div>
+          <div className="section-number">
+            ● {`0${tabs.indexOf(active) + 1} / ${tabs.length}`}
+          </div>
       </div>
     </div>
   );
@@ -81,6 +115,7 @@ export const FadeInDiv = ({
   const isActive = (tab: Tab) => {
     return tab.value === tabs[0].value;
   };
+
   return (
     <div className="relative w-full h-full">
       {tabs.map((tab, idx) => (
