@@ -1,4 +1,4 @@
-"use client";
+
 
 import Better from "../animation/better"
 import AnimatedDopeText from "../blocks/animatedDopeText";

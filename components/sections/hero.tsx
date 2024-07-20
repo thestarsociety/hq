@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import AsciiBackground from "../animation/background";
 import { MissionBlock } from "../blocks/mission";
 import QuoteBlock from "../blocks/quoteBlock";
@@ -18,6 +19,17 @@ const quotes: string[][] = [
   ];
 
 export const HeroSection = () => {
+
+    useEffect(() => {
+        const hash = window.location.hash.slice(1);
+        if (hash) {
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }, []);
+
     return (
         <div className="w-full mt-5 mb-20">
             <div className="flex w-full justify-between mb-[20px] py-2.5 px-6 border-[1.5px] border-black rounded-[40px] font-[14px]">

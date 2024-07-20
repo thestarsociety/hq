@@ -76,7 +76,7 @@ export const ShowWork = ({
 
 
                 {/* Content */}
-                <div className="relative z-10 flex items-center justify-between h-full">
+                <div className="relative flex items-center justify-between h-full">
                     <div className="flex-1 flex items-center justify-start p-4">
                         <p className="text-tssWhite text-5xl">
                             {brandName}

@@ -2,6 +2,7 @@
 
 import { SectionWelcome } from "../blocks/sectionWelcome"
 import { ShowWork } from "../blocks/showWork";
+import { MetaAI } from "../showcase/metaai";
 
 export const WorkSection = () => {
     return (
@@ -20,7 +21,7 @@ export const WorkSection = () => {
                 "/showcase/saturn-2.jpg"
             ]} expandedText="This is saturn." additionalSection={<div className="bg-gray-200 p-6 rounded-[20px]">This is an additional section.</div>} comingSoon={true}/>
             <ShowWork brandName="Saturn" backgroundColor="bg-duskBlack" brandLogo="/showcase/Saturn/saturn-logo.svg" categoryTag="Brand Design" backgroundImages={["/showcase/saturn-2.jpg"]} expandedText="Saturn AI" additionalSection={<div className="bg-gray-200 p-6 rounded-[20px]">This is an additional section.</div>} comingSoon={false}/>
-            <ShowWork brandName="Meta AI" backgroundColor="bg-duskBlack" brandLogo="/showcase/metaai/meta-ai-logo.svg" categoryTag="Brand Identity" backgroundImages={["/showcase/saturn-2.jpg"]} expandedText="Branding AI by visualizing its beautiful complexities." expandedTextColor="text-blue-600" additionalSection={<div className="bg-gray-200 p-6 rounded-[20px]">This is an additional section.</div>} comingSoon={false}/>
+            <ShowWork brandName="Meta AI" backgroundColor="bg-duskBlack" brandLogo="/showcase/metaai/meta-ai-logo.svg" categoryTag="Brand Identity" backgroundImages={["/showcase/saturn-2.jpg"]} expandedText="Branding AI by visualizing its beautiful complexities." expandedTextColor="text-blue-600" additionalSection={<MetaAI />} comingSoon={false}/>
            </div>
         </div>
     )

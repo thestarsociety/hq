@@ -24,7 +24,7 @@ export default function RootLayout({
         grotesk.className
       )}>
         <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" disableTransitionOnChange>
-          {children}
+              {children}
         </ThemeProvider>
       </body>
     </html>
