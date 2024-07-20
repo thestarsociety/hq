@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import AsciiBackground from "../animation/background";
 import { MissionBlock } from "../blocks/mission";
 import QuoteBlock from "../blocks/quoteBlock";
@@ -19,16 +18,6 @@ const quotes: string[][] = [
   ];
 
 export const HeroSection = () => {
-
-    useEffect(() => {
-        const hash = window.location.hash.slice(1);
-        if (hash) {
-          const element = document.getElementById(hash);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        }
-      }, []);
 
     return (
         <div className="w-full mt-5 mb-20">
