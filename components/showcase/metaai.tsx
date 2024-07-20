@@ -1,3 +1,4 @@
+import { SectionHeader } from "./custom/section-header"
 import ShowcaseMainTextWithImage from "./custom/showcase-main-image-1"
 import { ShowcaseMainImageWithoutText } from "./custom/showcase-main-image-2"
 import { VideoComponent } from "./custom/video-component"
@@ -15,6 +16,9 @@ export const MetaAI = () => {
 
             {/* Part-2 image */}
             <ShowcaseMainImageWithoutText backgroundColor="bg-quasarBlue" backgroundImage="/showcase/metaai/meta-ai-titles-block-2.png"/>
+
+            <SectionHeader text="Speech Recognition" backgroundColor="bg-indigo-400"/>
+            <ShowcaseMainImageWithoutText backgroundImage="/showcase/metaai/MA-06.jpg" backgroundColor="bg-transparent"/>
         </div>
     )
 }
