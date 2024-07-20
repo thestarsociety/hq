@@ -81,9 +81,9 @@ export const Tabs = ({ tabs: propTabs, footerTitle = "Approach", footerColor = "
               <Image
               src={tab.backgroundImage}
               alt={`Background for ${tab.title}`}
-              objectFit="contain"
+              style={{objectFit: "contain"}}
               className="z-0 p-[100px]"
-              layout="fill"
+              fill={true}
             />
             )}
             <div className="z-10 relative">
