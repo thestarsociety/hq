@@ -62,7 +62,7 @@ export const ShowWork = ({
                             src={img}
                             alt={`Background ${index + 1}`}
                             fill={true}
-                            style={{objectFit: "contain"}}
+                            style={{objectFit: "cover"}}
                         />
                     </div>
                 ))}
