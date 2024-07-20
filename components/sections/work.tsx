@@ -16,13 +16,11 @@ export const WorkSection = () => {
            <SectionWelcome backgroundColor="bg-wrathBlack" sectionText="Work" sectionNo="03"/>
 
            {/* Work ShowCase */}
-           <div className="space-y-8">
             <ShowWork brandName="Fresh Studio" backgroundColor="bg-duskBlack" brandLogo="/assets/title-block-n.svg" categoryTag="Brand Design" backgroundImages={[
                 "/showcase/saturn-2.jpg"
             ]} expandedText="This is saturn." additionalSection={<div className="bg-gray-200 p-6 rounded-[20px]">This is an additional section.</div>} comingSoon={true}/>
             <ShowWork brandName="Saturn" backgroundColor="bg-duskBlack" brandLogo="/showcase/Saturn/saturn-logo.svg" categoryTag="Brand Design" backgroundImages={["/showcase/saturn-2.jpg"]} expandedText="Saturn AI" additionalSection={<div className="bg-gray-200 p-6 rounded-[20px]">This is an additional section.</div>} comingSoon={false}/>
-            <ShowWork brandName="Meta AI" backgroundColor="bg-duskBlack" brandLogo="/showcase/metaai/meta-ai-logo.svg" categoryTag="Brand Identity" backgroundImages={["/showcase/saturn-2.jpg"]} expandedText="Branding AI by visualizing its beautiful complexities." expandedTextColor="text-blue-600" additionalSection={<MetaAI />} comingSoon={false}/>
-           </div>
+            <ShowWork brandName="Meta AI" backgroundColor="bg-duskBlack" brandLogo="/showcase/metaai/meta-ai-logo.svg" categoryTag="Brand Identity" backgroundImages={["/showcase/saturn-2.jpg", "/showcase/saturn-1.jpg"]} expandedText="Branding AI by visualizing its beautiful complexities." expandedTextColor="text-blue-600" additionalSection={<MetaAI />} comingSoon={false}/>
         </div>
     )
 }

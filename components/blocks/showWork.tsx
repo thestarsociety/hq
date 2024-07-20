@@ -35,37 +35,12 @@ export const ShowWork = ({
     };
 
     return (
-        <div className="perspective-[1000px] my-4 relative">
-            {/* Background images */}
-            {backgroundImages.map((img, index) => (
-                <div 
-                    key={index}
-                    className={cn(
-                        "absolute inset-0 transition-all duration-300 ease-in-out",
-                        !comingSoon && !isExpanded && isHovered ? "transform-style-3d" : "opacity-0"
-                    )}
-                    style={{
-                        zIndex: -index - 1,
-                        transform: !comingSoon && !isExpanded && isHovered 
-                            ? `rotateX(-30deg) translateY(${(index + 1) * -15}px) translateZ(${(index + 1) * -10}px)` 
-                            : 'none'
-                    }}
-                >
-                    <Image 
-                        src={img}
-                        alt={`Background ${index + 1}`}
-                        fill={true}
-                        style={{objectFit: "cover"}}
-                        className="rounded-[20px]"
-                    />
-                </div>
-            ))}
-
+        <div className="transition-all duration-500 ease-in-out">
             <div 
                 className={cn(
-                    "w-full p-[20px] border-[1.5px] border-transparent rounded-[20px] relative overflow-hidden transition-all duration-500 ease-in-out",
+                    "w-full p-[20px] border-[1.5px] border-transparent rounded-[20px] mt-4 relative overflow-hidden transition-all duration-500 ease-in-out",
                     backgroundColor,
-                    !comingSoon && !isExpanded && isHovered ? "transform-style-3d rotate-x-[-20deg]" : "",
+                    !comingSoon && !isExpanded && isHovered ? "transform skew-y-2" : "",
                     isExpanded ? "h-auto" : "h-[10vw]",
                     comingSoon ? "" : "cursor-pointer"
                 )}
@@ -73,10 +48,27 @@ export const ShowWork = ({
                 onMouseLeave={() => setIsHovered(false)}
                 onClick={toggleExpand}
             >
-
+                {/* Background images */}
+                {backgroundImages.map((img, index) => (
+                    <div 
+                        key={index}
+                        className={cn(
+                            "absolute inset-0 transition-all duration-300 ease-in-out",
+                            !comingSoon && !isExpanded && isHovered ? `transform skew-y-${(index + 2) * 2} translate-y-${(index + 1) * 4}` : "opacity-0"
+                        )}
+                        style={{zIndex: -index - 1}}
+                    >
+                        <Image 
+                            src={img}
+                            alt={`Background ${index + 1}`}
+                            fill={true}
+                            style={{objectFit: "contain"}}
+                        />
+                    </div>
+                ))}
 
                 {/* Content */}
-                <div className="relative flex items-center justify-between h-full">
+                <div className="relative z-10 flex items-center justify-between h-full">
                     <div className="flex-1 flex items-center justify-start p-4">
                         <p className="text-tssWhite text-5xl">
                             {brandName}
