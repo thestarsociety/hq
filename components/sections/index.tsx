@@ -1,3 +1,12 @@
+import AnimatedDopeText from "../blocks/animatedDopeText"
+import QuoteBlock from "../blocks/quoteBlock"
+import { SectionWelcome } from "../blocks/sectionWelcome"
+import { ShowcaseImage } from "../blocks/showcaseImage"
+
+const quotes: string[][] = [
+    ["The (Cosmic) Index", "is our compendium of", "unusually great", "products, people, and", "ideas that inspire us to", "think differently."]
+]
+
 export const IndexSection = () => {
     return (
         <div className="w-full mt-5 mb-20">
@@ -5,11 +14,14 @@ export const IndexSection = () => {
                 <p>01</p>
                 <p>The Star Society</p>
             </div>
-            <div className="w-full h-full p-[20px] border-[1.5px] border-black rounded-[20px] bg-mellowyellow text-tssWhite">
-                <h1 className="font-semibold text-4xl">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. &nbsp; In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
-                </h1>
-            </div>
+            
+            <SectionWelcome backgroundColor="bg-forestGreen" sectionNo="07" sectionText="Cosmic Index" textColor="text-black"/>
+
+            <ShowcaseImage backgroundImage="/assets/cosmic-index.svg" backgroundColor="bg-transparent"/>
+
+            <QuoteBlock backgroundColor="bg-forestGreen" quotes={quotes} textColor="text-black"/>
+
+            <AnimatedDopeText text="Subscribe to our cosmic newsletter!" arrowColor="#000000" backgroundColor="bg-forestGreen" textColor="text-black"/>
         </div>
     )
 }

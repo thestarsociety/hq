@@ -4,15 +4,18 @@ interface SectionWelcomeProps {
     backgroundColor: string;
     sectionText: string;
     sectionNo: string;
+    textColor?: string;
 }
 
-export const SectionWelcome = ({ backgroundColor, sectionText, sectionNo }: SectionWelcomeProps) => {
+export const SectionWelcome = ({ backgroundColor, sectionText, sectionNo, textColor }: SectionWelcomeProps) => {
     return (
         <div className={cn(
             "w-full h-full p-[20px] border-[1.5px] hover:border-black rounded-[20px] bg-spacePurple text-tssWhite",
             backgroundColor
         )}>
-                <p className="text-8xl p-4">{sectionNo}</p>
+                <p className={cn(
+                    "text-8xl p-4", textColor
+                )}>{sectionNo}</p>
                 <br />
                 <br />
                 <br />
@@ -21,8 +24,10 @@ export const SectionWelcome = ({ backgroundColor, sectionText, sectionNo }: Sect
                 <br />
                 <br />
                 <br />
-                <br />
-                <h1 className="font-semibold text-[150px] p-4">
+                <h1 className={cn(
+                    "text-[180px] p-4",
+                    textColor
+                )}>
                     {sectionText}
                 </h1>
             </div>

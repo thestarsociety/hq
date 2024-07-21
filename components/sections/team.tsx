@@ -5,6 +5,7 @@ import QuoteBlock from "../blocks/quoteBlock";
 import StarSociety from "../blocks/abstractText";
 import AnimatedDopeText from "../blocks/animatedDopeText";
 import { Tabs } from "../blocks/tabbedBlock";
+import { SectionWelcome } from "../blocks/sectionWelcome";
 
 const quotes: string[][] = [
     ["Finding the best", "talent in the world and", "helping them make the", "best work of their lives."]
@@ -35,21 +36,8 @@ export const TeamSection = () => {
                 <p>01</p>
                 <p>The Star Society</p>
             </div>
-            <div className="w-full h-full p-[20px] border-[1.5px] hover:border-black rounded-[20px] bg-quasarBlue text-tssWhite">
-                <p className="text-8xl p-4">04</p>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <h1 className="font-semibold text-[150px] p-4">
-                    Team
-                </h1>
-            </div>
+            
+            <SectionWelcome backgroundColor="bg-quasarBlue" sectionNo="04" sectionText="Team"/>
 
             {/* Node display */}
             <div className="w-full h-auto p-[20px] border-[1.5px] hover:border-black rounded-[20px] bg-quasarBlue text-tssWhite mt-4">

@@ -94,7 +94,7 @@ const config = {
           DEFAULT: "#FF003D"
         },
         lemonYellow: {
-          DEFAULT: "#FFD800"
+          DEFAULT: "#FF0"
         },
         forestGreen: {
           DEFAULT: "#05FF00"

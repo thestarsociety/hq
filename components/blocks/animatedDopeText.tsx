@@ -6,7 +6,8 @@ import { cn } from "@/lib/utils";
 interface AnimatedDopeTextProps {
     text: string;
     backgroundColor: string;
-    arrowColor: string
+    arrowColor: string;
+    textColor?: string;
 }
 
 
@@ -20,7 +21,7 @@ const AnimatedArrow = ({ color }: { color: string }) => {
     );
 };
 
-export const AnimatedDopeText = ({ text, backgroundColor, arrowColor }: AnimatedDopeTextProps) => {
+export const AnimatedDopeText = ({ text, backgroundColor, arrowColor, textColor }: AnimatedDopeTextProps) => {
     return (
         <div className={cn(
             "w-full h-auto p-[20px] border-[1.5px] border-transparent rounded-[20px] mt-4 flex flex-row justify-between items-center",
@@ -30,7 +31,9 @@ export const AnimatedDopeText = ({ text, backgroundColor, arrowColor }: Animated
                 <AnimatedArrow color={arrowColor} />
             </div>
             <div className="flex items-center justify-center">
-                <h1 className="text-tssWhite text-2xl">
+                <h1 className={cn(
+                    "text-tssWhite text-2xl", textColor
+                )}>
                     {text}
                 </h1>
             </div>

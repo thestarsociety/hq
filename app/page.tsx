@@ -24,7 +24,7 @@ const Home: React.FC = () => {
         <div id="careers" className="sec min-h-screen"><CareerSection /></div>
         <div id="contact" className="sec min-h-screen"><ContactSection /></div>
         <div id="index" className="sec min-h-screen"><IndexSection /></div>
-        <div className="h-full w-full !border-none"></div>
+        
       </div>
     </div>
   );
