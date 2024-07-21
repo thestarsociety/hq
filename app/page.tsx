@@ -9,7 +9,6 @@ import { HeroSection } from "@/components/sections/hero";
 import { TeamSection } from "@/components/sections/team";
 import { WorkSection } from "@/components/sections/work";
 import { NavBar } from "@/components/navBar";
-import { BackgroundWrapper } from "@/components/bgWrapper";
 
 const Home: React.FC = () => {
   return (

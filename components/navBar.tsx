@@ -20,9 +20,9 @@ const navItems: NavItem[] = [
   { id: 'approach', component: ApproachPage, bgColor: 'bg-spacePurple' },
   { id: 'work', component: WorkPage, bgColor: 'bg-wrathBlack' },
   { id: 'team', component: TeamPage, bgColor: 'bg-quasarBlue' },
-  { id: 'careers', component: CareersPage, bgColor: 'bg-subduednavy' },
-  { id: 'contact', component: ContactPage, bgColor: 'bg-warmtaupe' },
-  { id: 'index', component: IndexPage, bgColor: 'bg-mellowyellow' },
+  { id: 'careers', component: CareersPage, bgColor: 'bg-vibrantPink' },
+  { id: 'contact', component: ContactPage, bgColor: 'bg-lemonYellow' },
+  { id: 'index', component: IndexPage, bgColor: 'bg-forestGreen' },
 ];
 
 export const NavBar: React.FC = () => {
@@ -100,14 +100,24 @@ export const NavBar: React.FC = () => {
   }, []);
   
 
+  const handleNavClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="map fixed h-full w-[15%] my-[50px] px-5 mb-4">
       {navItems.map(item => (
         <div
           key={item.id}
-          className={`relative flex flex-col justify-between mb-5 p-5 border-[1.5px] hover:border-black rounded-[20px] transition-all duration-500 ${item.bgColor} text-tssWhite ${
+          className={`relative flex flex-col justify-between mb-5 p-5 border-[1.5px] hover:border-black rounded-[20px] transition-all duration-500 ${item.bgColor} ${
+            item.id === 'contact' || item.id === 'index' ? 'text-black' : 'text-white'
+          } ${
             activeSection === item.id ? 'h-[150px]' : 'h-[100px]'
-          }`}
+          } cursor-pointer`}
+          onClick={() => handleNavClick(item.id)}
         >
           <item.component />
         </div>

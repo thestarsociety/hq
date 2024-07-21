@@ -96,8 +96,8 @@ const config = {
         lemonYellow: {
           DEFAULT: "#FFD800"
         },
-        neonGreen: {
-          DFEAULT: "#05FF00"
+        forestGreen: {
+          DEFAULT: "#05FF00"
         },
         tssWhite: {
           DEFAULT: "#F4E9E1"
