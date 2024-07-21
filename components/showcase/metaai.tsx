@@ -1,3 +1,4 @@
+import { TwoColumnImage } from "./custom/2-column-image"
 import { SectionHeader } from "./custom/section-header"
 import ShowcaseMainTextWithImage from "./custom/showcase-main-image-1"
 import { ShowcaseMainImageWithoutText } from "./custom/showcase-main-image-2"
@@ -19,6 +20,8 @@ export const MetaAI = () => {
 
             <SectionHeader text="Speech Recognition" backgroundColor="bg-indigo-400"/>
             <ShowcaseMainImageWithoutText backgroundImage="/showcase/metaai/MA-06.jpg" backgroundColor="bg-transparent"/>
+
+            <TwoColumnImage backgroundImageOne="/showcase/metaai/image-row-1-1.jpg" backgroundImageTwo="/showcase/metaai/image-row-1-2.jpg"/>
         </div>
     )
 }

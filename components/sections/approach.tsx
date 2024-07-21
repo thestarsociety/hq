@@ -48,7 +48,7 @@ export const ApproachSection = () => {
             <SectionWelcome backgroundColor="bg-spacePurple" sectionText="Approach" sectionNo="02"/>
 
             {/* Approach-section-1 */}
-            <Better />
+            {/* better */}
             {/* Approach-section-2 */}
             <MissionBlock rows={rowsData}/>
             {/* Approach-section-3 */}

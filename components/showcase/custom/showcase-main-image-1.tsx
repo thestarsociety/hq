@@ -24,7 +24,7 @@ const ShowcaseMainTextWithImage = ({
 }: ShowcaseMainTextWithImageProps) => {
   return (
     <div 
-      className={`w-full h-full p-[20px] border-[1.5px] border-zinc-900 rounded-[20px] mt-4 ${backgroundColor}`}
+      className={`w-full h-full p-[20px] border-[1.5px] border-none rounded-[20px] mt-4 ${backgroundColor}`}
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',

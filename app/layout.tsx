@@ -1,5 +1,5 @@
-
-import  localFont  from "next/font/local";
+// app/layout.tsx
+import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/themeProvider";
 import { constructMetadata } from "@/lib/metadata";
@@ -19,14 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(
-        "h-full w-full bg-[#F4E9E1]",
-        grotesk.className
-      )}>
-        <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" disableTransitionOnChange>
-              {children}
-        </ThemeProvider>
-      </body>
+        <body className={cn(
+          "h-full w-full transition-colors duration-300",
+          grotesk.className
+        )}>
+          <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" disableTransitionOnChange>
+            {children}
+          </ThemeProvider>
+        </body>
     </html>
   );
 }
