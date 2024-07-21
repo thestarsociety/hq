@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
         <body className={cn(
-          "h-full w-full transition-colors duration-300",
+          "h-full w-full transition-colors duration-300 bg-tssWhite",
           grotesk.className
         )}>
           <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" disableTransitionOnChange>
