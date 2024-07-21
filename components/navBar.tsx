@@ -108,7 +108,7 @@ export const NavBar: React.FC = () => {
   };
 
   return (
-    <div className="map fixed h-full w-[15%] my-[50px] px-5 mb-4">
+    <div className="map hidden fixed lg:block lg:fixed h-full w-[15%] my-[50px] px-5 mb-4">
       {navItems.map(item => (
         <div
           key={item.id}

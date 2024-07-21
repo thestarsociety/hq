@@ -16,7 +16,7 @@ const Home: React.FC = () => {
       <NavBar />
 
       {/* Sections */}
-      <div className="sections absolute w-[85%] left-[15%] pt-[30px] pr-[20px]">
+      <div className="sections absolute w-full lg:w-[85%] lg:left-[15%] pt-[30px] lg:pr-[20px] p-4">
         <div id="hero" className="sec min-h-screen"><HeroSection /></div>
         <div id="approach" className="sec min-h-screen"><ApproachSection /></div>
         <div id="work" className="sec min-h-screen"><WorkSection /></div>
