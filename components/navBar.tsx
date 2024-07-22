@@ -28,10 +28,23 @@ const navItems: NavItem[] = [
 
 export const NavBar: React.FC = () => {
   const { activeSection, setActiveSection, scrollProgress, setScrollProgress } = useGlobalStore();
+  const [sectionHeights, setSectionHeights] = useState<number[]>([]);
 
   useEffect(() => {
-    const sectionDivs = Array.from(document.querySelectorAll<HTMLDivElement>(".sections > div"));
     const mapDivs = Array.from(document.querySelectorAll<HTMLDivElement>(".map > div"));
+    const sectionDivs = Array.from(document.querySelectorAll<HTMLDivElement>(".sections > div"));
+  
+    const RATIO = 0.05;
+    const heights: number[] = sectionDivs.map(section => section.clientHeight * RATIO);
+    setSectionHeights(heights);
+  
+    const sectionTotalHeight = sectionDivs.reduce((sum, section) => sum + section.clientHeight, 0);
+    const mapTotalHeight = mapDivs.reduce((sum, map) => sum + map.clientHeight, 0) + (mapDivs.length - 1) * 75;
+  
+    const sectionScrollableHeight = sectionTotalHeight - window.innerHeight;
+    const mapScrollableHeight = mapTotalHeight - window.innerHeight;
+  
+    const scrollRatio = mapScrollableHeight / sectionScrollableHeight;
   
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -44,13 +57,20 @@ export const NavBar: React.FC = () => {
     sectionDivs.forEach((section) => observer.observe(section));
 
     const handleScroll = () => {
+      const scrollPos = window.scrollY;
+      const mapTranslateY = scrollPos * scrollRatio;
+      const mapElement = document.querySelector<HTMLDivElement>(".map");
+      if (mapElement) {
+        mapElement.style.transform = `translateY(-${mapTranslateY}px)`;
+      }
+
       sectionDivs.forEach((section, index) => {
         const rect = section.getBoundingClientRect();
         const progress = Math.max(0, Math.min(1, 1 - (rect.bottom / rect.height)));
         setScrollProgress(section.id, progress);
 
         if (section.id === activeSection) {
-          mapDivs[index].style.height = `${100 + progress * 50}px`;
+          mapDivs[index].style.height = `${sectionHeights[index]}px`;
         } else {
           mapDivs[index].style.height = "100px";
         }
@@ -63,7 +83,7 @@ export const NavBar: React.FC = () => {
       sectionDivs.forEach((section) => observer.unobserve(section));
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [setActiveSection, setScrollProgress, activeSection]);
+  }, [setActiveSection, setScrollProgress, activeSection, sectionHeights]);
 
   const handleNavClick = (id: string) => {
     const element = document.getElementById(id);

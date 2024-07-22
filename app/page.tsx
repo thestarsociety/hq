@@ -17,13 +17,13 @@ const Home: React.FC = () => {
 
       {/* Sections */}
       <div className="sections absolute w-full lg:w-[85%] lg:left-[15%] pt-[30px] lg:pr-[20px] p-4">
-        <div id="hero" className="sec min-h-screen"><HeroSection /></div>
-        <div id="approach" className="sec min-h-screen"><ApproachSection /></div>
-        <div id="work" className="sec min-h-screen"><WorkSection /></div>
-        <div id="team" className="sec min-h-screen"><TeamSection /></div>
-        <div id="careers" className="sec min-h-screen"><CareerSection /></div>
-        <div id="contact" className="sec min-h-screen"><ContactSection /></div>
-        <div id="index" className="sec min-h-screen"><IndexSection /></div>
+        <div id="hero" className="sec"><HeroSection /></div>
+        <div id="approach" className="sec"><ApproachSection /></div>
+        <div id="work" className="sec"><WorkSection /></div>
+        <div id="team" className="sec"><TeamSection /></div>
+        <div id="careers" className="sec"><CareerSection /></div>
+        <div id="contact" className="sec"><ContactSection /></div>
+        <div id="index" className="sec"><IndexSection /></div>
         
       </div>
     </div>
