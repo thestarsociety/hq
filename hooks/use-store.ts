@@ -1,22 +1,25 @@
-// store.ts
-import { create } from 'zustand';
+import create from 'zustand';
 
-interface StoreState {
-  progress: number;
-  activeSection: number | null;
-  navTo: number | null;
-  setProgress: (progress: number) => void;
-  setActiveSection: (section: number | null) => void;
-  setNavTo: (section: number | null) => void;
-}
+type GlobalState = {
+  isExpanded: boolean;
+  setIsExpanded: (isExpanded: boolean) => void;
+  activeSection: string;
+  setActiveSection: (section: string) => void;
+  scrollProgress: { [key: string]: number };
+  setScrollProgress: (section: string, progress: number) => void;
+};
 
-const useStore = create<StoreState>((set) => ({
-  progress: 0,
-  activeSection: null,
-  navTo: null,
-  setProgress: (progress) => set({ progress }),
+export const useGlobalStore = create<GlobalState>((set) => ({
+  isExpanded: false,
+  setIsExpanded: (isExpanded) => set({ isExpanded }),
+  activeSection: 'hero',
   setActiveSection: (section) => set({ activeSection: section }),
-  setNavTo: (section) => set({ navTo: section }),
+  scrollProgress: {},
+  setScrollProgress: (section, progress) => 
+    set((state) => ({ 
+      scrollProgress: { 
+        ...state.scrollProgress, 
+        [section]: progress 
+      } 
+    })),
 }));
-
-export default useStore;

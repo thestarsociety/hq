@@ -1,5 +1,6 @@
 "use client";
 
+import { useGlobalStore } from "@/hooks/use-store";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
@@ -28,7 +29,7 @@ export const ShowWork = ({
     comingSoon = false
 }: ShowWorkProps) => {
     const [isHovered, setIsHovered] = useState(false);
-    const [isExpanded, setIsExpanded] = useState(false);
+    const { isExpanded, setIsExpanded } = useGlobalStore();
 
     const toggleExpand = () => {
         if (!comingSoon) {

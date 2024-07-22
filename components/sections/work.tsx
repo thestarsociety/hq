@@ -3,8 +3,11 @@
 import { SectionWelcome } from "../blocks/sectionWelcome"
 import { ShowWork } from "../blocks/showWork";
 import { MetaAI } from "../showcase/metaai";
+import { useGlobalStore } from "@/hooks/use-store";
 
 export const WorkSection = () => {
+    const { activeSection } = useGlobalStore();
+
     return (
         <div className="w-full mt-5 mb-20">
             <div className="flex w-full justify-between mb-[20px] py-2.5 px-6 border-[1.5px] border-black rounded-[40px] font-[14px]">

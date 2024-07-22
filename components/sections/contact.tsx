@@ -1,3 +1,5 @@
+"use client";
+
 import { GullyHeader } from "../blocks/gullyHeader"
 import { SectionWelcome } from "../blocks/sectionWelcome"
 

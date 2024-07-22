@@ -1,3 +1,5 @@
+"use client";
+
 import AnimatedDopeText from "../blocks/animatedDopeText"
 import QuoteBlock from "../blocks/quoteBlock"
 import { SectionWelcome } from "../blocks/sectionWelcome"
