@@ -83,7 +83,7 @@ export const NavBar: React.FC = () => {
       sectionDivs.forEach((section) => observer.unobserve(section));
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [setActiveSection, setScrollProgress, activeSection, sectionHeights]);
+  }, [activeSection, sectionHeights]);
 
   const handleNavClick = (id: string) => {
     const element = document.getElementById(id);
