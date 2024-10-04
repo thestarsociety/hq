@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
   return (
